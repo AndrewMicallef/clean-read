@@ -19,6 +19,13 @@ The driving philosphy is to *Eschew Obfuscation and Enunciate Lucidity.*
 
 ---
 
+Regex pattern to capture name dates:
+`(([a-z]*[;&,\s]){1,} (\d{4}))`
+
+
+
+
+
 ## `hide refs on Science Direct`
 
 ```{.CSS}
