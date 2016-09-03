@@ -1,0 +1,20 @@
+{
+
+  "manifest_version": 2,
+  "name": "clean-read",
+  "version": "1.0",
+
+  "description": "Hides refs on science direct articles",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.sciencedirect.org/*"],
+      "js": ["clean-read.js"]
+    }
+  ]
+
+}
