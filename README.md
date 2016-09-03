@@ -1,13 +1,20 @@
 # clean-read
 ---
 
-This is the first step in what I am calling:
+This is the first step in what I am calling **Project Lucidity**
 
 ![](https://cdn.meme.am/instances/500x/71482294.jpg)
 
-The driving philosphy is to <span style='font-family: serif'>Eschew Obfuscation and Enunciate Lucidity.</span>
+The driving philosphy is to *Eschew Obfuscation and Enunciate Lucidity.*
 
-![](Concept.png)
+TODO:
+- Easy:
+
+    [] : Replace acronymns with expanded phrases
+- Less Easy:
+    [] : Compress inline references
+- Hard:
+    [] : Graph inline numerical statements
 
 
 ---
