@@ -10,11 +10,11 @@ The driving philosphy is to *Eschew Obfuscation and Enunciate Lucidity.*
 TODO:
 - Easy:
 
-    [] : Replace acronymns with expanded phrases
+    [ ] : Replace acronymns with expanded phrases
 - Less Easy:
-    [] : Compress inline references
+    [ ] : Compress inline references
 - Hard:
-    [] : Graph inline numerical statements
+    [ ] : Graph inline numerical statements
 
 
 ---
