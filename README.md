@@ -1,9 +1,11 @@
 # clean-read
 ---
 
-This is the first step in what I am calling 
+This is the first step in what I am calling:
+
 ![](https://cdn.meme.am/instances/500x/71482294.jpg)
 
+The driving philosphy is to > Eschew Obfuscation and Enunciate Lucidity.
 
 ![](Concept.png)
 
