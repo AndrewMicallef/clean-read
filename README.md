@@ -22,6 +22,11 @@ The driving philosphy is to *Eschew Obfuscation and Enunciate Lucidity.*
 Regex pattern to capture name dates:
 `(([a-z]*[;&,\s]){1,} (\d{4}))`
 
+... Because I need to be able to use any unicode letter for peoples names,
+and regex in Mozilla does not support the `\p{L}` character lookup, which
+in PERL would get a letter from any language, I will need to find a different
+more complex strategy...
+
 ---
 #To install
 

@@ -16,8 +16,8 @@ function highlight(element, regex) {
         text += node.nodeValue
     }
     
-    if (!nodes.length)
-        return;
+   // if (!nodes.length)
+   //     return;
 
     var match;
     while (match = regex.exec(text)) {
@@ -59,9 +59,9 @@ function highlight(element, regex) {
                 });
             }
             
-            // Highlight the current node
+            // hide the current node
             var spanNode = document.createElement("span")
-            spanNode.className = "highlight";
+            spanNode.className = "hide";
             
             
             
@@ -74,13 +74,28 @@ function highlight(element, regex) {
     }
 }
 
+// the section works on Science Direct....
+// TO DO: find a robust method to do this
+// TO DO: [easier] create a database of methods for specific journals
+
 var sections = document.querySelectorAll("p[class*='section']");
-var regex = new RegExp('\\(.*?\\)', "g");
+var regex = /\(([^\d]*?, \d{4},?)+?\)/igm;
+
+
+var css = '.hide:hover{ display: inline }';
+style = document.createElement('style');
+
+if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+} else {
+    style.appendChild(document.createTextNode(css));
+}
+
+document.getElementsByTagName('head')[0].appendChild(style);
 
 
 [].forEach.call(sections, function(sections) {
   // do whatever
     highlight(sections, regex);
     
-  
 });
