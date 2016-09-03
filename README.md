@@ -22,7 +22,10 @@ The driving philosphy is to *Eschew Obfuscation and Enunciate Lucidity.*
 Regex pattern to capture name dates:
 `(([a-z]*[;&,\s]){1,} (\d{4}))`
 
+---
+#To install
 
+`about:debugging` -> Load Temporary Add On -> any file in directory
 
 
 
