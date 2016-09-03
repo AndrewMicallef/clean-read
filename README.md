@@ -5,7 +5,7 @@ This is the first step in what I am calling:
 
 ![](https://cdn.meme.am/instances/500x/71482294.jpg)
 
-The driving philosphy is to <>Eschew Obfuscation and Enunciate Lucidity.<>
+The driving philosphy is to <span style='font-family: serif'>Eschew Obfuscation and Enunciate Lucidity.</span>
 
 ![](Concept.png)
 
@@ -24,7 +24,7 @@ a[id*='bib'][class = 'intra_ref'] {
 appending this to the css of a science direct article sort of works; 
 it takes the bibliographic references and hides them, but leaves blank space. 
 A better solution would be to replace with greyed brackets, ie: 
-<span style="color: grey">(...)</span>, which expand when mouse rollovers, to reveal the
+<span style="color: silver">(...)</span>, which expand when mouse rollovers, to reveal the
 links.
 
 Even better would be to have the links appear in a list, clicking on each one
