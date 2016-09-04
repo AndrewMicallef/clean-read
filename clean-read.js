@@ -3,11 +3,13 @@
 function highlight(element, regex) {
     var document = element.ownerDocument;
     
+    // ?
     var nodes = [],
         text = "",
         node,
         nodeIterator = document.createNodeIterator(element, NodeFilter.SHOW_TEXT, null, false);
-        
+    
+    // results in a string that contains all the nodes text minus markup.
     while (node = nodeIterator.nextNode()) {
         nodes.push({
             textNode: node,
@@ -15,9 +17,10 @@ function highlight(element, regex) {
         });
         text += node.nodeValue
     }
-    
-   // if (!nodes.length)
-   //     return;
+
+   // break if no text? 
+   if (!nodes.length)
+        return;
 
     var match;
     while (match = regex.exec(text)) {
@@ -77,11 +80,23 @@ function highlight(element, regex) {
 // the section works on Science Direct....
 // TO DO: find a robust method to do this
 // TO DO: [easier] create a database of methods for specific journals
+// perhaps I could just use any `p` section, and hope that the sites use `p` to
+// refer to what it ought to, ie paragraph...
 
 var sections = document.querySelectorAll("p[class*='section']");
 var regex = /\(([^\d]*?, \d{4},?)+?\)/igm;
 
+// This section loops through all the `sections`
+// highlight applies the regex to the text and adds all matches to the class
+// `hide`. Class hide gets the display = none, style attribute.
+[].forEach.call(sections, function(sections) {
+  // do whatever
+    highlight(sections, regex);
+    
+});
 
+
+// this doesn't work
 var css = '.hide:hover{ display: inline }';
 style = document.createElement('style');
 
@@ -92,10 +107,3 @@ if (style.styleSheet) {
 }
 
 document.getElementsByTagName('head')[0].appendChild(style);
-
-
-[].forEach.call(sections, function(sections) {
-  // do whatever
-    highlight(sections, regex);
-    
-});
