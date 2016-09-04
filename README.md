@@ -1,7 +1,11 @@
 # clean-read
 ---
 
+
+
 **NOT WORKING YET**, bare with, bare with.
+
+in the meantime, this is probably a better project to go to anyway https://github.com/codeforscience/sciencefair
 
 This is the first step in what I am calling **Project Lucidity**
 
