@@ -5,7 +5,7 @@
 
 **NOT WORKING YET**, bare with, bare with.
 
-in the meantime, this is probably a better project to go to anyway https://github.com/codeforscience/sciencefair (Or it would be if it wasn't a mac exclusive....stick with me if you want something for any firefox (and after that, maybe even chrome (and maybe the world after that)))
+in the meantime, this is probably a better project to go to anyway https://github.com/codeforscience/sciencefair (Or it would be if it wasn't a mac exclusive....stick with me if you want something for any firefox (and after that, maybe even chrome (and maybe the world after that)) (also this bullshit is the exact opposite of the project goal.))
 
 This is the first step in what I am calling **Project Lucidity**
 
