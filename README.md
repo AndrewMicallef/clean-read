@@ -1,6 +1,8 @@
 # clean-read
 ---
 
+**NOT WORKING YET**, bare with, bare with.
+
 This is the first step in what I am calling **Project Lucidity**
 
 ![](https://cdn.meme.am/instances/500x/71482294.jpg)
@@ -8,13 +10,14 @@ This is the first step in what I am calling **Project Lucidity**
 The driving philosphy is to *Eschew Obfuscation and Enunciate Lucidity.*
 
 ##TODO:
+
 - Easy:
     - [ ] Think of a better name and come up with a logo (really not important)
     - [ ] Replace acronymns with expanded phrases
     - [ ] Make a toggle button for Firefox plugin
     - [ ] Make a toggle switch to highligh what will be hidden to confirm we aren't 
           losing actual page content
-    - [ ]
+    - [ ] Make it actually do something when you install it
 - Less Easy:
     - [ ] Compress inline references
 - Hard:
