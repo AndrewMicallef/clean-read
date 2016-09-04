@@ -21,5 +21,6 @@
     "default_icon": "icons/lucidify.svg",
     "browser_style": true,
     "default_title": "Lucidify"
+    "default_popup": "popup/menu.html"
   }
 }
