@@ -9,12 +9,20 @@ The driving philosphy is to *Eschew Obfuscation and Enunciate Lucidity.*
 
 ##TODO:
 - Easy:
-
+    - [ ] Think of a better name and come up with a logo (really not important)
     - [ ] Replace acronymns with expanded phrases
+    - [ ] Make a toggle button for Firefox plugin
+    - [ ] Make a toggle switch to highligh what will be hidden to confirm we aren't 
+          losing actual page content
+    - [ ]
 - Less Easy:
     - [ ] Compress inline references
 - Hard:
-    - [ ] : Graph inline numerical statements
+    - [ ] Graph inline numerical statements
+    - [ ] Make a database which holds the type of Journal and the place to find the body text ?
+    - [ ] Alternativley (bad) allow the user to select paragraphs to be filtered
+            (I don't like that solution as it increases the transaction cost for 
+            the user and makes them less likely to want to lucidify the text)
 
 
 ---
@@ -28,26 +36,6 @@ in PERL would get a letter from any language, I will need to find a different
 more complex strategy...
 
 ---
-#To install
+#To install in firefox
 
-`about:debugging` -> Load Temporary Add On -> any file in directory
-
-
-
-## `hide refs on Science Direct`
-
-```{.CSS}
-
-a[id*='bib'][class = 'intra_ref'] {
-    display: none;
-}
-```
-
-appending this to the css of a science direct article sort of works; 
-it takes the bibliographic references and hides them, but leaves blank space. 
-A better solution would be to replace with greyed brackets, ie: 
-<span style="color: silver">(...)</span>, which expand when mouse rollovers, to reveal the
-links.
-
-Even better would be to have the links appear in a list, clicking on each one
-would take you to the web address of the publication.
+`about:debugging` -> Load Temporary Add On -> select any file in directory
