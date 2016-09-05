@@ -79,8 +79,8 @@ function highlight(element, regex, type) {
                    spanNode.style.display = 'none';
                    break;
               case 'Turn OFF':
-                   spanNode.style.display = 'visible';
-                   spanNode.style.color = 'dodgerblue';
+                   spanNode.style.display = 'initial';
+                   spanNode.style.color = 'initial';
                    break;   
             }
             
