@@ -16,10 +16,11 @@ document.addEventListener("click", function(e) {
   }
 
   var choice = e.target.textContent;
-  
+
   chrome.tabs.executeScript(null, {
-    file: "/content_scripts/clean-read.js"
+    file: "/content_scripts/clean_read.js"
   });
+  console.log('loaded script?')
 
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
     chrome.tabs.sendMessage(tabs[0].id, {opt: choice});

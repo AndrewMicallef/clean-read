@@ -9,18 +9,15 @@
   "icons": {
     "48": "icons/lucidify.svg"
   },
-
-  "content_scripts": [
-    {
-      "matches": ["*://*.sciencedirect.org/*"],
-      "js": ["clean-read.js"]
-    }
-  ],
+  
+    "permissions": [
+    "activeTab"
+  ],  
   
   "browser_action": {
     "default_icon": "icons/lucidify.svg",
     "browser_style": true,
-    "default_title": "Lucidify"
+    "default_title": "Lucidify",
     "default_popup": "popup/menu.html"
   }
 }
