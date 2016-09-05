@@ -1,6 +1,6 @@
 //http://stackoverflow.com/a/31369978
 
-function highlight(element, regex) {
+function highlight(element, regex, type) {
     var document = element.ownerDocument;
     
     // ?
@@ -71,39 +71,63 @@ function highlight(element, regex) {
             node.textNode.parentNode.replaceChild(spanNode, node.textNode)
             spanNode.appendChild(node.textNode)
             
-            spanNode.style.display = 'none';
+            switch(type) {
+                case 'Highlight':
+                   spanNode.style.color = 'red';
+                   break;
+               case 'Hide':
+                   spanNode.style.display = 'none';
+                   break;
+              case 'Turn OFF':
+                   spanNode.style.display = 'visible';
+                   spanNode.style.color = 'dodgerblue';
+                   break;   
+            }
             
         }
     }
 }
 
-// the section works on Science Direct....
-// TO DO: find a robust method to do this
-// TO DO: [easier] create a database of methods for specific journals
-// perhaps I could just use any `p` section, and hope that the sites use `p` to
-// refer to what it ought to, ie paragraph...
 
-var sections = document.querySelectorAll("p[class*='section']");
-var regex = /\(([^\d]*?, \d{4},?)+?\)/igm;
+/*
+-------------------------------------------------------------------------------
+*/
+/*
+Lucidify():
+* grabs the document paragraphs
+* loops through each one and applies highlight on the regex capture
+* TODO tidy up.
+*/
+function Lucidify(request, sender, sendResponse) {
 
-// This section loops through all the `sections`
-// highlight applies the regex to the text and adds all matches to the class
-// `hide`. Class hide gets the display = none, style attribute.
-[].forEach.call(sections, function(sections) {
-  // do whatever
-    highlight(sections, regex);
-    
-});
+    /* the section works on Science Direct....
+     * TO DO: find a robust method to do this
+     * TO DO: [easier] create a database of methods for specific journals
+     -        perhaps I could just use any `p` section, and hope that the 
+     -        sites use `p` to refer to what it ought to, ie paragraph...
+     */
+    console.log('got inside lucidify')
+    var sections = document.querySelectorAll("p");
+    var regex = /\(([^\d]*?, \d{4},?)+?\)/igm;
 
+    // This section loops through all the `sections`
+    // highlight applies the regex to the text and adds all matches to the class
+    // `hide`. Class hide gets the display = none, style attribute.
+    [].forEach.call(sections, function(sections) {
+        // do whatever
+        highlight(sections, regex, request.opt);
 
-// this doesn't work
-var css = '.hide:hover{ display: inline }';
-style = document.createElement('style');
+    });
 
-if (style.styleSheet) {
-    style.styleSheet.cssText = css;
-} else {
-    style.appendChild(document.createTextNode(css));
+    // request.opt is the message sent from the menu
+    //request.opt // one of 'Highlight', 'OFF', 'Hide'
+    //chrome.runtime.onMessage.removeListener(beastify);
 }
 
-document.getElementsByTagName('head')[0].appendChild(style);
+
+
+/*
+Assign Lucidify() as a listener for messages from the extension.
+*/
+chrome.runtime.onMessage.addListener(Lucidify);
+console.log('Added listner')
