@@ -19,11 +19,11 @@ The driving philosphy is to *Eschew Obfuscation and Enunciate Lucidity.*
     - [ ] Think of a better name and come up with a logo (really not important)
     - [ ] Replace acronymns with expanded phrases
     - [ ] Make a toggle button for Firefox plugin
-    - [ ] Make a toggle switch to highligh what will be hidden to confirm we aren't 
+    - [X] Make a toggle switch to highlight what will be hidden to confirm we aren't 
           losing actual page content
-    - [ ] Make it actually do something when you install it
+    - [X] Make it actually do something when you install it
 - Less Easy:
-    - [ ] Compress inline references
+    - [X] Compress inline references
 - Hard:
     - [ ] Graph inline numerical statements
     - [ ] Make a database which holds the type of Journal and the place to find the body text ?
@@ -31,6 +31,11 @@ The driving philosphy is to *Eschew Obfuscation and Enunciate Lucidity.*
             (I don't like that solution as it increases the transaction cost for 
             the user and makes them less likely to want to lucidify the text)
 
+
+---
+##Mechanism of action
+
+The basic principle is this program grabs all text nested under the HTML p (for paragraph) tags, removes all other markup, and then searches for patterns matching the "Bracket, ((name, comma,) x I date) x J, close Bracket" format.
 
 ---
 
