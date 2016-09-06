@@ -37,6 +37,9 @@ The driving philosphy is to *Eschew Obfuscation and Enunciate Lucidity.*
 
 The basic principle is this program grabs all text nested under the HTML p (for paragraph) tags, removes all other markup, and then searches for patterns matching the "Bracket, ((name, comma,) x I date) x J, close Bracket" format.
 
+This is not a robust look up, and have already found it fails on a few sites. Good nes is that you can bring back the content by reloading the page. Bad news is you have to reload the page
+
+
 ---
 
 Regex pattern to capture name dates:
