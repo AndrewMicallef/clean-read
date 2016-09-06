@@ -54,3 +54,7 @@ more complex strategy...
 #To install in firefox
 
 `about:debugging` -> Load Temporary Add On -> select any file in directory
+
+Get from addons page oce it has been reviewed
+
+https://addons.mozilla.org/en-US/firefox/addon/clean-read/
