@@ -40,6 +40,10 @@ The basic principle is this program grabs all text nested under the HTML p (for 
 This is not a robust look up, and have already found it fails on a few sites. Good nes is that you can bring back the content by reloading the page. Bad news is you have to reload the page
 
 
+### A Better idea:
+
+Query: [the style repository](https://www.zotero.org/styles) for the journal name, use the resulting .csl file to build an appropriate regex pattern!!!!
+
 ---
 
 Regex pattern to capture name dates:
