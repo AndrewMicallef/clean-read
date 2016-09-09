@@ -1,17 +1,21 @@
 # clean-read
----
-
-
-
-**NOT WORKING YET**, bare with, bare with.
-
-in the meantime, this is probably a better project to go to anyway https://github.com/codeforscience/sciencefair (Or it would be if it wasn't a mac exclusive....stick with me if you want something for any firefox (and after that, maybe even chrome (and maybe the world after that)) (also this bullshit is the exact opposite of the project goal.))
 
 This is the first step in what I am calling **Project Lucidity**
 
 ![](https://cdn.meme.am/instances/500x/71482294.jpg)
 
 The driving philosphy is to *Eschew Obfuscation and Enunciate Lucidity.*
+
+
+#To install in firefox
+
+Get it from the add-ons list here: https://addons.mozilla.org/en-US/firefox/addon/clean-read/
+
+development versions:
+In firefox address bar type: `about:debugging` 
+- click `Load Temporary Add On` 
+- select any file in directory
+
 
 ##TODO:
 
@@ -54,11 +58,3 @@ and regex in Mozilla does not support the `\p{L}` character lookup, which
 in PERL would get a letter from any language, I will need to find a different
 more complex strategy...
 
----
-#To install in firefox
-
-`about:debugging` -> Load Temporary Add On -> select any file in directory
-
-Get from addons page oce it has been reviewed
-
-https://addons.mozilla.org/en-US/firefox/addon/clean-read/
