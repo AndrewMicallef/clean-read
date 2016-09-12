@@ -56,6 +56,11 @@ lite-weight lookup table that remembers the regex's for common sites. Or better 
 visited by the user in a cookie?
 
 
+The zotero style repository appears to be a fork of [this repsitory](https://github.com/citation-style-language/styles). 
+I should use this for searching for the styles. Then perhaps [citeproc-js](https://github.com/juris-m/citeproc-js) might
+help for rendering the regex?
+
+
 ---
 
 Regex pattern to capture name dates:
