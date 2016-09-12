@@ -12,13 +12,13 @@ containing the opt.
 */
 document.addEventListener("click", function(e) {
   if (!e.target.classList.contains("option")) {
-      console.log('got click on option')
+      //console.log('got click on option');
 
     return;
   }
 
   var choice = e.target.textContent;
-  console.log(choice)
+  //console.log(choice)
   chrome.tabs.executeScript(null, {
     file: "/content_scripts/clean-read.js"
   });

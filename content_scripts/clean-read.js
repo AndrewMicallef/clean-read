@@ -102,7 +102,11 @@ Lucidify():
 * TODO tidy up.
 */
 function Lucidify(request, sender, sendResponse) {
-
+    
+    if (response.opt == "Turn OFF"){
+        return;
+    }
+    
     /* the section works on Science Direct....
      * TO DO: find a robust method to do this
      * TO DO: [easier] create a database of methods for specific journals
@@ -110,19 +114,19 @@ function Lucidify(request, sender, sendResponse) {
      -        sites use `p` to refer to what it ought to, ie paragraph...
      */
 
-    //var sections = document.querySelectorAll("p[class*='section']");
-    //var regex = /\(([^\d]*?, \d{4},?)+?\)/igm;
+    var sections = document.querySelectorAll("p[class*='section']");
+    var regex = /\(([^\d]*?, \d{4},?)+?\)/igm;
 
     // This section loops through all the `sections`
     // highlight applies the regex to the text and adds all matches to the class
     // `hide`. Class hide gets the display = none, style attribute.
-    //[].forEach.call(sections, function(sections) {
-    //    // do whatever
-    //    highlight(sections, regex);
-    //
-    //});
+    [].forEach.call(sections, function(sections) {
+        // do whatever
+        highlight(sections, regex);
+    
+    });
 
-    console.log(request.opt) // is the message sent from the menu
+    //console.log(request.opt) // is the message sent from the menu
     //request.opt // one of 'Highlight', 'OFF', 'Hide'
     //chrome.runtime.onMessage.removeListener(beastify);
 }
