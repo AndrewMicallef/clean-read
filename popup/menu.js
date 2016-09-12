@@ -12,6 +12,8 @@ containing the opt.
 */
 document.addEventListener("click", function(e) {
   if (!e.target.classList.contains("option")) {
+      //console.log('got click on option');
+
     return;
   }
 

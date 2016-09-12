@@ -10,9 +10,15 @@
     "48": "icons/lucidify.svg"
   },
   
+<<<<<<< HEAD
     "permissions": [
     "activeTab"
   ],  
+=======
+  "permissions": [
+    "activeTab"
+  ],
+>>>>>>> menu_dev
   
   "browser_action": {
     "default_icon": "icons/lucidify.svg",

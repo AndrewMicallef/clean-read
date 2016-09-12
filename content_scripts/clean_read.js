@@ -88,7 +88,6 @@ function highlight(element, regex, type) {
     }
 }
 
-
 /*
 -------------------------------------------------------------------------------
 */
@@ -99,7 +98,11 @@ Lucidify():
 * TODO tidy up.
 */
 function Lucidify(request, sender, sendResponse) {
-
+    
+    if (response.opt == "Turn OFF"){
+        return;
+    }
+    
     /* the section works on Science Direct....
      * TO DO: find a robust method to do this
      * TO DO: [easier] create a database of methods for specific journals
@@ -115,11 +118,12 @@ function Lucidify(request, sender, sendResponse) {
     // `hide`. Class hide gets the display = none, style attribute.
     [].forEach.call(sections, function(sections) {
         // do whatever
+
         highlight(sections, regex, request.opt);
 
     });
 
-    // request.opt is the message sent from the menu
+    //console.log(request.opt) // is the message sent from the menu
     //request.opt // one of 'Highlight', 'OFF', 'Hide'
     //chrome.runtime.onMessage.removeListener(beastify);
 }
@@ -130,4 +134,3 @@ function Lucidify(request, sender, sendResponse) {
 Assign Lucidify() as a listener for messages from the extension.
 */
 chrome.runtime.onMessage.addListener(Lucidify);
-console.log('Added listner')
