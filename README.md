@@ -48,6 +48,14 @@ This is not a robust look up, and have already found it fails on a few sites. Go
 
 Query: [the style repository](https://www.zotero.org/styles) for the journal name, use the resulting .csl file to build an appropriate regex pattern!!!!
 
+[Perhaps leveraging Zotero won't work for this purpose](https://groups.google.com/forum/#!topic/zotero-dev/oYTY2OH2f8A).
+Adam Smith advises that the zotero look up would be slow. I would need to translate the pages meta-data and then pull out
+the journal title then pass that to a custom script for searching the repository. I suppose it comes down to working out how 
+slow this would be in the worst case, after all it should only be done once per page. It might even be possible to stor a 
+lite-weight lookup table that remembers the regex's for common sites. Or better [optionally] stores the look ups for the sites
+visited by the user in a cookie?
+
+
 ---
 
 Regex pattern to capture name dates:
